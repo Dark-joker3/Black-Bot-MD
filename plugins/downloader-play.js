@@ -40,29 +40,29 @@ let handler = async (m, { conn, command, args, text, usedPrefix }) => {
   try {
     const yt_play = await search(args.join(" "));
     let texto1 = `*◉—⌈🔊 𝐘𝐎𝐔𝐓𝐔𝐁𝐄 𝐏𝐋𝐀𝐘 🔊⌋—◉*\n
-❏ 📌 *𝚃𝙸𝚃𝚄𝙻𝙾:* ${yt_play[0].title}
-❏ 📆 *𝙿𝚄𝙱𝙻𝙸𝙲𝙰𝙳𝙾:* ${yt_play[0].ago}
-❏ ⌚ *𝙳𝚄𝚁𝙰𝙲𝙸𝙾𝙽:* ${secondString(yt_play[0].duration.seconds)}
-❏ 👀 *𝚅𝙸𝚂𝚃𝙰𝚂:* ${`${MilesNumber(yt_play[0].views)}`}
-❏ 👤 *𝙰𝚄𝚃𝙾𝚁:* ${yt_play[0].author.name}
-❏ ⏯️ *𝙲𝙰𝙽𝙰𝙻:* ${yt_play[0].author.url}
-❏ 🆔 *𝙸𝙳:* ${yt_play[0].videoId}
-❏ 🪬 *𝚃𝙸𝙿𝙾:* ${yt_play[0].type}
-❏ 🔗 *𝙻𝙸𝙽𝙺:* ${yt_play[0].url}`.trim();
+❏ 📌 *TITLE:* ${yt_play[0].title}
+❏ 📆 *PUBLISHED:* ${yt_play[0].ago}
+❏ ⌚ *DURATION:* ${secondString(yt_play[0].duration.seconds)}
+❏ 👀 *VIEWS:* ${`${MilesNumber(yt_play[0].views)}`}
+❏ 👤 *AUTHOR:* ${yt_play[0].author.name}
+❏ ⏯️ *CHANNEL:* ${yt_play[0].author.url}
+❏ 🆔 *ID:* ${yt_play[0].videoId}
+❏ 🪬 *GUY:* ${yt_play[0].type}
+❏ 🔗 *LINK:* ${yt_play[0].url}`.trim();
     const buttons = [
       {
         buttonId: `#ytmp3 ${yt_play[0].url}`,
-        buttonText: { displayText: "🎵 𝐀𝐔𝐃𝐈𝐎 🎵" },
+        buttonText: { displayText: "🎵 AUDIO 🎵" },
         type: 1,
       },
       {
         buttonId: `#ytmp4 ${yt_play[0].url}`,
-        buttonText: { displayText: "🎥 𝐕𝐈𝐃𝐄𝐎 🎥" },
+        buttonText: { displayText: "🎥 VIDEO 🎥" },
         type: 1,
       },
       {
         buttonId: `#playlist ${text}`,
-        buttonText: { displayText: "📋 𝐌𝐀𝐒 𝐑𝐄𝐒𝐔𝐋𝐓𝐀𝐃𝐎𝐒 📋" },
+        buttonText: { displayText: "📋 MORE RESULTS 📋" },
         type: 1,
       },
     ];
